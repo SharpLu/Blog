@@ -127,7 +127,7 @@ Comparing the performances of time consumption in network and passing routers
 between three network transport protocol(ICMP, TCP and UDP), we conclude to use
 UDP as primary choice due to its high performance in terms low delay.
 
-![Figure 2: Master-slaves structure for guarantee consistency in distributed sys- tems.](http://feng.io/static/distributed_imgs/master-slaves.png)
+![Figure 2: Master-slaves structure for guarantee consistency in distributed sys- tems.](http://feng.io/static/distributed/master-slaves.png)
 
 A great deal of experiment data will be collect from a server. We will then
 categorize these data by quorum into a readable format. Based on obtaining the
@@ -159,7 +159,7 @@ meaningful and worthy. So, according to our graphs, users are provided several
 trade off strategies, which avoiding unpredictable or endless time waiting and
 consistency waste in a durable time limit, therefor saving the cost.
 
-![Figure 3: The latency RTT in three geographical data centers when different quorum participates.](http://feng.io/static/distributed_imgs/latencyRTT.png)
+![Figure 3: The latency RTT in three geographical data centers when different quorum participates.](http://feng.io/static/distributed/latencyRTT.png)
 
 6.1 Latency In Figure 3(C), when we allocate 7 replicas to the master which is
 in California, we can realize that 99 percent of nodes reach consistency in less
