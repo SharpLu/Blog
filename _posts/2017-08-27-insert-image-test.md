@@ -11,6 +11,6 @@ Go-go-gadget blog post
 
 
 
-![my test1]({{site.url}}/static/distributed/master-slaves.png)
+![my test1](http://feng.io/static/distributed/master-slaves.png)
 
-![mytest2]({{site.url}}/static/distributed/latencyRTT.png)
+![mytest2](http://feng.io/static/distributed/latencyRTT.png)
