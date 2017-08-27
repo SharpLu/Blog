@@ -1,0 +1,41 @@
+- name: Distributed Systems
+  desc: |
+    This journey towards distributed systems algorithms, which focus on algorithms and P2P networks
+  tag_name: DistributedSystems
+
+- name: Algorithms & System Design
+  desc: |
+    Thoughts on building high quality Sftware with smart algorithms
+  tag_name: Algorithms
+
+- name: Big Data Infrastructure
+  desc: |
+    This journey towards to Big Data Infrastructure, which included how to building the reliable, flexible high scalable 
+    big data platform
+  tag_name: BigData
+
+- name: Data Scientifc
+  desc: |
+    Real-world case to processing large of data with data science and visualization
+  tag_name: DataScientifc
+
+- name: Machien Learning
+  desc: |
+    Machine learning algorithms and the fundamentals of deep learning
+  tag_name: MachineLearning
+
+# - name: The way of the success
+#   desc: |
+#     Flailing around with data and trying to make sense of it all
+#   tag_name: data_sci
+
+# - name: Tangential
+#   desc: |
+#     The intersection of software and other crafts &amp; 
+#     professions
+#   tag_name: tangential
+
+# - name: Engineering in Android
+#   desc: |
+#     Applying best-practices &amp; techniques to Android development
+#   tag_name: android

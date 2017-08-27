@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Matt Swanson's Blog</title>
+ <link href="http://feng.io/atom.xml" rel="self"/>
+ <link href="http://feng.io/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>https://feng.io/</id>
+ <author>
+   <name>Feng</name>
+   <email>hi@feng.io</email>
+   <url>feng.io</url>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://feng.io{{ post.url }}"/>
+   <published>{{ post.date | date_to_xmlschema }}</published>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>https://feng.io{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
