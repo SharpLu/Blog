@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Customize Log4j for Apache Spark categories:
+title: Customize Log4j for Apache Spark 
+categories:
 - blog
 tags:
 - BigData
