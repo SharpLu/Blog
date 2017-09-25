@@ -14,7 +14,7 @@ Log4j is a loger framework that has developed by Java, Apache Spark uses log4j a
 
 
 As apache spark official documents introduced we only need to replace default configuration file, then Spark will default to looking for the config file and load to application
-1. Go to folder "spark 2.0/conf/log4j.properties.template" replace to log4j.properties
+1.Go to folder "spark 2.0/conf/log4j.properties.template" replace to log4j.properties
 Note: log4j.rootCategory=INFO if you change the rootCategory level then it will change all components log level. Customize by yourself
 
 
@@ -65,7 +65,7 @@ Logger.getLogger("akka").setLevel(Level.OFF);
 
 
 ```
-4. Never tried
+4.Never tried
 
 
 ```Java
