@@ -4,7 +4,7 @@ title: Mastering Java Programming Within One Day
 categories:
 - blog
 tags:
-- BigData
+- Programming
 date: 2015-12-31
 ---
 
