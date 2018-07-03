@@ -14,15 +14,10 @@
     big data platform
   tag_name: BigData
 
-- name: Data Scientifc
+- name: Programming Languages
   desc: |
-    Real-world case to processing large of data with data science and visualization
-  tag_name: DataScientifc
-
-- name: Machien Learning
-  desc: |
-    Machine learning algorithms and the fundamentals of deep learning
-  tag_name: MachineLearning
+    Fundamentals of Programming Languages and Compilers, Java, Python, JVM.
+  tag_name: Programming
 
 # - name: The way of the success
 #   desc: |
