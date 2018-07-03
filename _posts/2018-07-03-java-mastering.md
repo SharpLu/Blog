@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "blog"
+title: "java-mastering"
 categories:
 - blog
 ---
 
 Go-go-gadget blog post
-sss
