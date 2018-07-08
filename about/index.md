@@ -10,8 +10,12 @@ I’m Feng and a big data engineer and researcher, interested in programming and
 
 Why do you blog?
 ----------
-I decided to "Blogging" mostly for selfish reasons. As a engineer you need the way to tracking of the technologies and algorithms, because you can't remember everything you learned and practiced. Sometimes you spend few days on a specific bug without conclusion and notes when the problem occurs again maybe you need to spend same time on it, your brain just like a cache system you have no idea when it will be clear up. The blog could help you yo persistent the all memory to disk whenever you need it, you always could find it. Also starting to blogging is inspired by "Jeff Atwood" from his post<<How To Achieve Ultimate Blog Success In One Easy Step>> After the inner struggle and my intuition push me maybe it’s time to “try blogging”. I have been a big data engineer for years, but still, haven’t broken through the bottleneck of my abilities. Helplessly, technologies iteration is too fast and so many stuff needs to catch up and hopefully, my blog will be utilized.
-
+I decided to "Blogging" mostly for selfish reasons. As a engineer you need the way to tracking of the technologies and algorithms, because you can't remember everything you learned and practiced. Sometimes you spend few days on a specific bug without conclusion and notes when the problem occurs again maybe you need to spend same time on it, your brain just like a cache system you have no idea when it will be clear up. The blog could help you yo persistent the all memory to disk whenever you need it, you always could find it. Also starting to blogging is inspired by "Jeff Atwood" from his post<How To Achieve Ultimate Blog Success In One Easy Step> After the inner struggle and my intuition push me maybe it’s time to “try blogging”. 
+ 
+ 
+ <!--哈哈我是注释，不会在浏览器中显示。
+ I have been a big data engineer for years, but still, haven’t broken through the bottleneck of my abilities. Helplessly, technologies iteration is too fast and so many stuff needs to catch up and hopefully, my blog will be utilized.
+-->
  
 
 Reference from "Jeff Atwood"
