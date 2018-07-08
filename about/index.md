@@ -15,10 +15,7 @@ I decided to "Blogging" mostly for selfish reasons. As a engineer you need the w
  
  <!--哈哈我是注释，不会在浏览器中显示。
  I have been a big data engineer for years, but still, haven’t broken through the bottleneck of my abilities. Helplessly, technologies iteration is too fast and so many stuff needs to catch up and hopefully, my blog will be utilized.
--->
- 
- 
-Reference from "Jeff Atwood"
+Advice from "Jeff Atwood"
 >When people ask me for advice on blogging, I always respond with yet another form of the same advice: pick a schedule you can live with, and stick to it. Until you do that, none of the other advice I could give you will matter. I don't care if you suck at writing. I don't care if nobody reads your blog. I don't care if you have nothing interesting to say. If you can demonstrate a willingness to write, and a desire to keep continually improving your writing, you will eventually be successful.
-
+-->
 
