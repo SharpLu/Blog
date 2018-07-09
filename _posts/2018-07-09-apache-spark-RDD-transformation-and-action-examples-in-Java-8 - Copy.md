@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apache Spaark RDD Transformation and Action Examples in Java 8
+title: Apache Spark RDD Transformation and Action Examples in Java 8
 categories:
 - blog
 tags:
