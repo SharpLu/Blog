@@ -20,6 +20,7 @@ Before you deploy to your production here suggest your make a test in your local
 
 Steps to install airflow on Mac
 
+```java
 brew install python python3
 
 pip install airflow
@@ -39,6 +40,7 @@ cd ~/airflow && airflow initdb
 
 # start the web server, default port is 8080
 cd ~/airflow && airflow webserver -p 8080
+```
 
 After setup the airflow, then you can deploy following the below steps.
 
