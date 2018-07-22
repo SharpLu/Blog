@@ -4,7 +4,7 @@ title: Understanding generic in java 8
 categories:
 - blog
 tags:
-- BigData
+- Programming
 date: 2017-06-01
 ---
 
@@ -33,15 +33,21 @@ Another case below it brings the compile safety, if without declare the type we 
 
 ```java
 List list=new ArrayList<>();
-list.add(1);list.add(2);list.add("hello");list.add("there");
+list.add(1);
+list.add(2);
+list.add("hello");
+list.add("there");
 
 Object object = list.get(0);
 Integer object = (Integer)list.get(0);
 ```
 
-The case two below, it inialized with Integer, but we has adhere the "hero", It will throw ClassCastException at runtime. The reason the listGeneric it declared Integer to the JVM, the compiler not allowed to add strings. 
+The cases below, it inialized with Integer, but we has adhere the "hello", It will throw ClassCastException at runtime. The reason the listGeneric it declared Integer to the JVM, the compiler not allowed to add strings. 
 ```java
-List<Integer> listGeneric =new ArrayList<>();listGeneric.add(1);listGeneric.add(2);listGeneric.add("hello"); // won't compile
+List<Integer> listGeneric =new ArrayList<>();
+listGeneric.add(1);
+listGeneric.add(2);
+listGeneric.add("hello"); // won't compile
 ```
 Lets make an generic type 
 
@@ -62,7 +68,15 @@ public T getInput(){
 As described above, MyGeneric is the class and it consists of the variable input type T, a contractor to construct the object of the MyGeneric class and initalize the variable input and a method that returns the value of T.
 
 ```java
- public class MyGenericsDemo {     public static void main(String[] args) {       MyGeneric<Integer> m1 =new MyGeneric<Integer>(1);       System.out.println(m1.getInput());       //It will print '1'       MyGeneric<String> m2 =new MyGeneric<String>("hello");       System.out.println(m2.getInput());       //It will print 'hello'} }
+ public class MyGenericsDemo {
+     public static void main(String[] args) {
+       MyGeneric<Integer> m1 =new MyGeneric<Integer>(1);
+       System.out.println(m1.getInput());
+       //It will print '1'
+       MyGeneric<String> m2 =new MyGeneric<String>("hello");
+       System.out.println(m2.getInput());
+       //It will print 'hello'
+} }
 
 ```
 
