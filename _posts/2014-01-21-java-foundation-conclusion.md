@@ -85,12 +85,103 @@ class Rectangle extends Shape
 
 ```
 
-
 2.接口（Interface）
+
+接口在Java当中是一个非常重要的概念如果你有接触过RPC RMI等传统Java框架你一定会记得接口这个概念，单独的class实现了多个方法，然后通过接口暴露方法和参数给外在程序进行调用. 相比abstract 接口更容易理解但是其重性可用abstract相当,接口可定义abstract但是默认会省掉. 接口可以按照字面意义去理解，通常接口只为方法提供一个接口其他的方法实现会有另外的class去实现.  
+
+```java
+interface Interface1
+{
+	public void method1();
+	public void method2("hi");
+	public void method3();
+}
+abstract class class1 implements Interface1
+{
+	public void method1(){}
+	public void method2(String arg1){
+		System.out.println
+	}
+	public void method3(){}
+```
+请技术关于如下接口的概念
+1.接口是用implements 关键字，继承是用extends
+2.接口与继承的区别，继承只能有一个父类，但是interface 可以implements 很多个class
+3.接口和抽象都不可被实例化， 还有就是接口当中所有的“方法”都必须是抽象的.
+
 
 2.继承（Inheritance）
 
+继承是Java当中最基础的一个概念了,同理可以按照字面意义去理解,继承是指一个class可以去继承另外一个class的属性和方法. 被继承的class称为父类，其继承class的类称为子类.
+继承的作用：
+当今软件设计的特征：
+软件规模越来越大；
+软件设计者越来越多；
+软件设计分工越来越细。
+引入继承，实现了代码重用；
+引入继承，实现了递增式的程序设计。
+继承是能自动传播代码和重用代码的有力工具；
+继承能够在某些比较一般的类的基础上建造、建立和扩充新类；
+能减少代码和数据的重复冗余度，并通过增强一致性来减少模块间的接口和界面，从而增强了程序的可维护性；
+能清晰地体现出类与类之间的层次结构关系。
+
+大家都知道子类可以调用父类class里面的方法，但是调用顺序我想大家未必都清楚.
+
+当生成子类对象时，Java默认首先调用父类的不带参数的构造方法，然后执行该构造方法，生成父类的对象。接下来，再去调用子类的构造方法，生成子类的对象。【要想生成子类的对象，首先需要生成父类的对象，没有父类对象就没有子类对象。比如说：没有父亲，就没有孩子】。
+```java
+public class Child extends Parent {
+    public Child() {
+        System.out.println("child");
+    }
+
+    @SuppressWarnings("unused")
+    public static void main(String[] args) {
+        Child child = new Child();
+    }
+}
+
+class Parent {
+    public Parent() {
+        System.out.println("no args parent");
+    }
+}
+如果父类没有不带参数的构造方法，则程序此时会出错..
+public class Child extends Parent {
+    public Child() {
+        System.out.println("child");
+    }
+
+    @SuppressWarnings("unused")
+    public static void main(String[] args) {
+        Child child = new Child();
+    }
+}
+
+class Parent {
+    public Parent(int i) {
+        System.out.println("parent");
+    }
+} 
+```
+继承的主要3个原则
+1.父类有的，子类也有
+2.父类没有的，子类可以增加
+3.父类有的，子类可以改变
+
+继承需要注意的4个原则
+1.构造方法不能被继承
+2.方法和属性可以被继承
+3.子类的构造方法隐式地调用父类的不带参数的构造方法
+4.当父类没有不带参数的构造方法时，子类需要使用 super 来显式地调用父类的构造方法， super 指的是对父类的引用
+
+
 3.多态（Polymorphism）
+
+
 
 4.封装（Encapsulation）
 
+5.构造函数
+
+
+6.Java关键字
