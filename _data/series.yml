@@ -19,17 +19,10 @@
     Fundamentals of Programming Languages and Compilers, Java, Python, JVM.
   tag_name: Programming
 
-
-  - name: AWS Certified Solutions Architect
+- name: AWS Certified Solutions Architect
   desc: |
-    Practices the major components of AWS, and prepare for the associate-level AWS Certified Solutions Architect exam.
+    Practices the major components of AWS, and prepare for the associate-level AWS Certified Solutions Architect exam
   tag_name: AWS
-
-
-# - name: The way of the success
-#   desc: |
-#     Flailing around with data and trying to make sense of it all
-#   tag_name: data_sci
 
 # - name: Tangential
 #   desc: |
