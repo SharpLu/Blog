@@ -1,7 +1,7 @@
-- name: Distributed Systems
+- name: AWS Certified Solutions Architect
   desc: |
-    This journey towards distributed systems algorithms, which focus on algorithms and P2P networks
-  tag_name: DistributedSystems
+    Practices the major components of AWS, and prepare for the associate-level AWS Certified Solutions Architect exam
+  tag_name: AWS
 
 - name: Algorithms & System Design
   desc: |
@@ -14,15 +14,17 @@
     big data platform
   tag_name: BigData
 
+- name: Distributed Systems
+  desc: |
+    This journey towards distributed systems algorithms, which focus on algorithms and P2P networks
+  tag_name: DistributedSystems
+
 - name: Programming Languages
   desc: |
     Fundamentals of Programming Languages and Compilers, Java, Python, JVM.
   tag_name: Programming
 
-- name: AWS Certified Solutions Architect
-  desc: |
-    Practices the major components of AWS, and prepare for the associate-level AWS Certified Solutions Architect exam
-  tag_name: AWS
+
 
 # - name: Tangential
 #   desc: |
