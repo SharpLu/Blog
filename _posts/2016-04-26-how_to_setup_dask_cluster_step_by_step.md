@@ -1,5 +1,4 @@
 ---
-​---
 layout: post
 title: How to setup Dask cluster step by step
 categories:
@@ -7,7 +6,6 @@ categories:
 tags:
 - BigData
 date: 2016-04-28	
-​---
 ---
 
 Hello guys, today I will show  you how to setup a Dask cluster on Amazon EC2 step by step.
