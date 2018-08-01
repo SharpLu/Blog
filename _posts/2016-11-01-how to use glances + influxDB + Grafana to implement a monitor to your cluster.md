@@ -1,5 +1,4 @@
 ---
-​---
 layout: post
 title: How to use glances + influxDB + Grafana to implement a monitor to your cluster
 categories:
@@ -7,7 +6,6 @@ categories:
 tags:
 - BigData
 date: 2016-11-01	
-​---
 ---
 
 The glances + influxDB + Grafana is a good combination to monitor your cluster, since majority cluster monitor is expensive and we could use glances + influxDB + Grafana for deploy a cluster monitor that used to collect your servers status, such as CPU disk network performance throughput so on, give you more accurate of matrices.
