@@ -12,8 +12,11 @@ Setup Dask cluster is cumbersome work, so I like to share the hands-on experienc
 
 before you start setup the clutser , just ensure you have to setup a Amazon account bind with your credit card, then you can start create your instances 
 
-1. Here we used 4 Ubuntu server for our Dask experiment environment server has 8 cores 32GB memory and 200SSD each instance
-2.after ubuntu setup, if you are familiar with Ubuntu shell command then you can start to download the continuum.io  acconda environment and install the Dask and Distributed.
+
+1.Here we used 4 Ubuntu server for our Dask experiment environment server has 8 cores 32GB memory and 200SSD each instance
+
+
+2.After ubuntu setup, if you are familiar with Ubuntu shell command then you can start to download the continuum.io  acconda environment and install the Dask and Distributed.
 
 First you have to install annaconda environment  and with Dask
 
