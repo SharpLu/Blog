@@ -10,15 +10,14 @@ date: 2016-04-28
 
 Setup Dask cluster is cumbersome work, so I like to share the hands-on experience here show how to setup a Dask cluster on Amazon EC2 step by step.
 
-First you have to setup a Amazon account bind with your credit card, then you can start create your server 
+before you start setup the clutser , just ensure you have to setup a Amazon account bind with your credit card, then you can start create your instances 
 
 1. Here we used 4 Ubuntu server for our Dask experiment environment server has 8 cores 32GB memory and 200SSD each instance
+2.after ubuntu setup, if you are familiar with Ubuntu shell command then you can start to download the continuum.io  acconda environment and install the Dask and Distributed.
 
-2.after ubuntu setup, if you are familiar with Ubuntu shell command then you can start         to download the continuum.io  acconda environment and install the Dask  and                         Distributed.
+First you have to install annaconda environment  and with Dask
 
-First you have to install annaconda environment   and with Dask
-
-Second make sure you have installed  distributed, this this distributed scheduler, used for coordinate between the client and workers.
+Second make sure you have installed dask distributed lib, this this distributed scheduler, used for coordinate between the client and workers.
 
 ```
 pip install distributed --upgrade
