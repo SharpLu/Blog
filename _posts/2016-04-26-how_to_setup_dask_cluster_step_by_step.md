@@ -8,11 +8,11 @@ tags:
 date: 2016-04-28	
 ---
 
-Hello guys, today I will show  you how to setup a Dask cluster on Amazon EC2 step by step.
+Setup Dask cluster is cumbersome work, so I like to share the hands-on experience here show how to setup a Dask cluster on Amazon EC2 step by step.
 
-First  you have to setup a Amazon account bind with your credit card, then you can start create your server 
+First you have to setup a Amazon account bind with your credit card, then you can start create your server 
 
-1. Here we used 4 Ubuntu server for our Dask experiment environment server has 8 cores   32GB memory and 200SSD each instance
+1. Here we used 4 Ubuntu server for our Dask experiment environment server has 8 cores 32GB memory and 200SSD each instance
 
 2.after ubuntu setup, if you are familiar with Ubuntu shell command then you can start         to download the continuum.io  acconda environment and install the Dask  and                         Distributed.
 
