@@ -42,14 +42,18 @@ access your influxdDB by browser localhost:8083
 ![](https://feng.io//static/glances/02.png)
 
 the glances access your database by port 8086
-
+```
 CREATE DATABASE “glances”
-
 CREATE USER “root” WITH PASSWORD ‘root’ WITH ALL PRIVILEGES
+```
 
 after you configuration all stuff properly then use
 
-glances –export-influxdb  to import data store to influxdb
+```
+glances –export-influxdb 
+```
+
+to import data store to influxdb
 
 Try to put your glances.conf file in the ~/.config/glances folder (create it if it did not exist).
 
