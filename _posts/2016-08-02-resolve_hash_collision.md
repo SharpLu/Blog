@@ -89,7 +89,7 @@ public class LinearProbingHashST<Key,Value> {
 
 3.Separate chains
 
-![](http://feng.io/static/hash_collision/03.png)
+![](http://feng.io/static/hash_collision/03.jpg)
 
 The idea are collisions can be resolved by creating a list of keys that map to the same value .
 
