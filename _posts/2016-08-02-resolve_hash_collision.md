@@ -105,4 +105,6 @@ d) If the list is empty then insert it directly
 
 e) If collision insert to the head of the list
 
-Disadvantage imbalance.
+
+References
+http://threezj.com/2016/03/28/%E7%94%A8%E6%8B%89%E9%93%BE%E6%B3%95%E5%92%8C%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B%E6%B3%95%E8%A7%A3%E5%86%B3%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81/
