@@ -5,7 +5,7 @@ categories:
 - blog
 tags:
 - BigData
-date: 2018-07-09
+date: 2016-07-09
 ---
 
 Let's getting started with Apache Spark,  before we moving further lets first understand the common terminologies associated with Spark, see how the internal part is works in Spark.
