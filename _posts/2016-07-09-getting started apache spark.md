@@ -63,3 +63,9 @@ How spark job get executed:
 3.Stages are then  submitted to TaskScheduler as TaskSets by the DAGScheduler. The TaskScheduler schedules the taskSets via cluster manager(YARN,Mesos) and monitor its execution. In case of the failure of the any task, it is re-run an finally the results are sent to the DAHScheduler. In case the result output files are lost, then DAGScheduler resubmits such stages to the TaskScheduler to be rerun again.
 
 4.Finally tasks are then scheduled on the designed executors (JVMs running on slave node) meeting the resource and data locality constrains. Each executor can also have more than one task assigned.
+
+
+
+References
+
+https://www.packtpub.com/big-data-and-business-intelligence/apache-spark-2x-java-developers
