@@ -97,6 +97,7 @@ foreach()
 
 Action must be after transformation RDD, because action is based on the current RDD or previous RDD.
 
+One important aspect of transformation also deals with dependency on partition of the parent RDD. If each partition of the generated RDD depends on fixed partition of the parent RDD then its called narrow dependency. 
 ##### Laze evaluation
 
 Another important feature for spark that is lazy evaluation, Spark create DAG according to your transformation and action programs. DAG is also called the lineage graph, of all the operations you performs on an RDD. Execution of the graphs starts only when an action is performed on RDD. Lets see the example below.
@@ -106,6 +107,7 @@ Another important feature for spark that is lazy evaluation, Spark create DAG ac
 First the RDD read data from storage, it could be HDFS, S3 or local path, and persist the data to RDD1, then RDD2 could be filter some specific data from RDD1 and generated to a new RDD3 that only stored the specific data  and finally could do action to performed the result.
 
 Benefits of RDD is linage , it makes the fault tolerant more reliable and robust, Since spark stored the calculated steps of each RDD stages, in case of any RDD or partition of RDD has failed it no necessary to read data from disk again, while can recalculated the RDD from previous RDD to improve the efficiency.  And Spark knows all the steps to be performed to calculate the end  result in advance, it can leverage this information to maximum to utilize the cluster resources in most optimized manner. 
+
 
 ##### Compare MapReduce to RDD
 
