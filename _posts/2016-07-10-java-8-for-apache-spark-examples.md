@@ -197,6 +197,33 @@ result.foreach(x-> System.out.println("sorted "+x));
 ```
 ##### Join()
 
+
+It used to join pair RDDs, this is the same concept as Join in SQL which conbined two or more datasets together. For instance, we have two pair RDDs of <x,y> and <x,z> types. When the join happens it will return an RDD of <x,(y,z)>	 type.
+
+The example below
+```java
+JavaPairRDD<String, String> pairRDD1 = javaSparkContext
+.parallelizePairs(Arrays.asList(new Tuple2<String, String>("B", "A"), new Tuple2<String, String>("C", "D"),
+new Tuple2<String, String>("D", "E"), new Tuple2<String, String>("A", "B")));
+JavaPairRDD<String, Integer> pairRDD2 = javaSparkContext.parallelizePairs(
+Arrays.asList(new Tuple2<String, Integer>("B", 2), new Tuple2<String, Integer>("C", 5),
+new Tuple2<String, Integer>("D", 7), new Tuple2<String, Integer>("A", 8)));
+JavaPairRDD<String, Tuple2<String, Integer>> joinedRDD = pairRDD1.join(pairRDD2);
+
+pairRDD1.join(pairRDD2).foreach(x -> System.out.println("Join " + x));
+pairRDD1.leftOuterJoin(pairRDD2).foreach(x-> System.out.println("leftOuterJoin "+x));
+pairRDD1.rightOuterJoin(pairRDD2).foreach(x-> System.out.println("rightOuterJoin "+x));
+pairRDD1.fullOuterJoin(pairRDD2).foreach(x-> System.out.println("fullOuterJoin "+x));
+
+In some cases of an RDD partitioned across multiple nodes, same keys will be shuffled to one of the executor nodes for the join operation. Therefore, overload is avaiable for all of the join operations and it will let the user provide a partitioner as well
+
+join(JavaPairRDD<K,V> other,Partitioner partitioner)
+leftOuterJoin(JavaPairRDD<K,V> other,Partitioner partitioner);
+rightOuterJoin(JavaPairRDD<K,V> other,Partitioner partitioner);
+fullOuterJoin(JavaPairRDD<K,V> other,Partitioner partitioner);
+
+```
+
 ##### coGroup()
 
 
