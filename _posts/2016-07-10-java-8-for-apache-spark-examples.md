@@ -121,7 +121,7 @@ Example below.
 
 Used to remove the duplicated elements in the RDD, distinct uses the hashCode and equals methods of the objects to find the distincts.
 
-![](http://feng.io/static/spark_examples/08.png)
+
 
 ```java
 JavaRDD<Integer> rddwithdupElements = javaSparkContext.parallelize(Arrays.asList(1, 1, 2, 4, 5, 6, 8, 8, 9, 10, 11, 11));
@@ -129,8 +129,21 @@ JavaRDD<Integer> distinct = rddwithdupElements.distinct();
 ```
 
 ##### Cartesian
+Quick to understand the Certesian function, this method are part of our methimatical set theory
+https://en.wikipedia.org/wiki/Cartesian_product
+
+Example below
+![](http://feng.io/static/spark_examples/09.png)
 
 
+```java
+		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName("ApacheSparkForJavaDevelopers");
+		JavaSparkContext javaSparkContext = new JavaSparkContext(conf);
+		JavaRDD<String> RDD1 = javaSparkContext.parallelize(Arrays.asList("A", "B", "C"));
+		JavaRDD<Integer> RDD2 = javaSparkContext.parallelize(Arrays.asList(1, 4, 5));
+		JavaPairRDD<String, Integer> result = RDD1.cartesian(RDD2);
+		result.foreach(x -> System.out.println(x));
+```
 
 ##### groupByKey
 
@@ -142,6 +155,9 @@ JavaRDD<Integer> distinct = rddwithdupElements.distinct();
 
 ##### coGroup
 
+
+
+Actions
 
 
 
