@@ -231,6 +231,7 @@ This coGroup function also used to groups two or more pairRDDs also it's iterabl
 ![](http://feng.io/static/spark_examples/14.png)
 The example below
 
+```java
 JavaPairRDD<String, String> pairRDD3 = javaSparkContext.parallelizePairs(Arrays.asList(new Tuple2<String, String>("B", "A"), new Tuple2<String, String>("B", "D"), new Tuple2<String, String>("A", "E"), new Tuple2<String, String>("A", "B")));
 JavaPairRDD<String, Integer> pairRDD4 = javaSparkContext.parallelizePairs(Arrays.asList(new Tuple2<String, Integer>("B", 2), new Tuple2<String, Integer>("B", 5), new Tuple2<String, Integer>("A", 7), new Tuple2<String, Integer>("A", 8)));
 JavaPairRDD<String, Tuple2<Iterable<String>, Iterable<Integer>>> cogroup = pairRDD3.cogroup(pairRDD4);
@@ -244,6 +245,7 @@ groupWithRDD = pairRDD1.groupWith(pairRDD2);
 
 Also this operation requires shuffling of the same keys to one executor on a partioned RDD, an overloaded function is avaiable to provide partitioner:
 cogroup(JavaPairRDD<K,V> other,Partitioner partitioner)
+```
 
 We will continues the action functions in next chapter.
 
