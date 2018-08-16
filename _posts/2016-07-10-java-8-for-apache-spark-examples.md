@@ -121,8 +121,7 @@ Example below.
 
 Used to remove the duplicated elements in the RDD, distinct uses the hashCode and equals methods of the objects to find the distincts.
 
-
-
+![](http://feng.io/static/spark_examples/08.png)
 ```java
 JavaRDD<Integer> rddwithdupElements = javaSparkContext.parallelize(Arrays.asList(1, 1, 2, 4, 5, 6, 8, 8, 9, 10, 11, 11));
 JavaRDD<Integer> distinct = rddwithdupElements.distinct();
@@ -162,7 +161,7 @@ System.out.println(x));
 
 groupByKey() function only works with PairRDD, if your previous RDD is not pair then it doesnt work. It used to group all the values that are related to the keys. It helps the transform a pairRDD consists of <key,value> pairs to pairRDD of <key, Iterable<value>> pairs. The below example, it execute the groupByKey operations on pairRDD generated in the mapToPair() function. 
 
-![](http://feng.io/static/spark_examples/09.png)
+![](http://feng.io/static/spark_examples/10.png)
 
 ```java
 
