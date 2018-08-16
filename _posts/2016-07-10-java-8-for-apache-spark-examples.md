@@ -91,7 +91,7 @@ JavaRDD<Integer> intRDD2 = javaSparkContext.parallelize(Arrays.asList(1, 4, 5));
 JavaRDD<Integer> union = intRDD1.union(intRDD2);
 ```
 
-##### Intersection
+##### Intersection()
 
 Intersection It used to find the common  intersected elements of both RDDs, and the target RDD consists of the elements that are identical in sources RDDs.
 
@@ -117,7 +117,7 @@ Example below.
     }
 ```
 
-##### Distinct
+##### Distinct()
 
 Used to remove the duplicated elements in the RDD, distinct uses the hashCode and equals methods of the objects to find the distincts.
 
@@ -127,7 +127,7 @@ JavaRDD<Integer> rddwithdupElements = javaSparkContext.parallelize(Arrays.asList
 JavaRDD<Integer> distinct = rddwithdupElements.distinct();
 ```
 
-##### Cartesian
+##### Cartesian()
 Quick to understand the Certesian() function, this method are part of our mathematical set theory.
 More information : https://en.wikipedia.org/wiki/Cartesian_product
 Certesian() methods generates a certesian product of two RDDs, each element of our first RDD is paired with each elements of te second RDD. Therefore, the time complexity is n²  and if the certesian operation is executed on an RDD of types X and an RDD of type Y it will return an RDD that will consist of <x,y> pairs. The resultant RDD will consist of all the possible pairs of <x,y>.
@@ -157,7 +157,7 @@ RDD3.cartesian(RDD4).foreach(x->
 System.out.println(x));
 ```
 
-##### groupByKey
+##### groupByKey()
 
 groupByKey() function only works with PairRDD, if your previous RDD is not pair then it doesnt work. It used to group all the values that are related to the keys. It helps the transform a pairRDD consists of <key,value> pairs to pairRDD of <key, Iterable<value>> pairs. The below example, it execute the groupByKey operations on pairRDD generated in the mapToPair() function. 
 
@@ -173,7 +173,7 @@ After the groupByKey the RDD belongs one key with list of values.
 
 ```
 
-##### reduceByKey
+##### reduceByKey()
 
 It used for pairRDDs that helps to aggregate data corresponding to a key with the help of an associative reduce function. We are given the same PairRDD that we are used in groupByKey example, reduceByKey operation can be performed as below.
 ![](http://feng.io/static/spark_examples/11.png)
@@ -187,25 +187,13 @@ pairRDD.reduceByKey((v1, v2) -> (v1)).foreach(x -> System.out.println(x));
 ```
     
     
-##### sortByKey
+##### sortByKey()
 
-##### Join
+##### Join()
 
-##### coGroup
-
-
-
-Actions
+##### coGroup()
 
 
-
-
-
-
-
-
- 
-
-
+References
 
 https://www.packtpub.com/big-data-and-business-intelligence/apache-spark-2x-java-developers
