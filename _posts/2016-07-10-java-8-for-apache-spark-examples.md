@@ -160,6 +160,21 @@ System.out.println(x));
 
 ##### groupByKey
 
+groupByKey() function only works with PairRDD, if your previous RDD is not pair then it doesnt work. It used to group all the values that are related to the keys. It helps the transform a pairRDD consists of <key,value> pairs to pairRDD of <key, Iterable<value>> pairs. The below example, it execute the groupByKey operations on pairRDD generated in the mapToPair() function. 
+
+![](http://feng.io/static/spark_examples/09.png)
+
+```java
+
+JavaPairRDD<String, Integer> pairRDD = intRDD.
+mapToPair(i -> (i % 2 == 0) ? new Tuple2<String, Integer>("even", i) : new Tuple2<String, Integer>("odd", i));
+pairRDD.groupByKey();
+
+After the groupByKey the RDD belongs one key with list of values.
+
+```
+
+
 ##### reduceByKey
 
 ##### sortByKey
