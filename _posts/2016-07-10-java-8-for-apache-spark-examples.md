@@ -129,12 +129,12 @@ JavaRDD<Integer> distinct = rddwithdupElements.distinct();
 ```
 
 ##### Cartesian
-Quick to understand the Certesian function, this method are part of our methimatical set theory
-https://en.wikipedia.org/wiki/Cartesian_product
+Quick to understand the Certesian() function, this method are part of our mathematical set theory.
+More information : https://en.wikipedia.org/wiki/Cartesian_product
+Certesian() methods generates a certesian product of two RDDs, each element of our first RDD is paired with each elements of te second RDD. Therefore, the time complexity is n² if the certesian operation is executed on an RDD of types X and an RDD of type Y it will return an RDD that will consist of <x,y> pairs. The resultant RDD will consist of all the possible pairs of <x,y>.
 
 Example below
 ![](http://feng.io/static/spark_examples/09.png)
-
 
 ```java
 SparkConf conf = new SparkConf().setMaster("local[*]").setAppName("ApacheSparkForJavaDevelopers");
@@ -143,6 +143,19 @@ JavaRDD<String> RDD1 = javaSparkContext.parallelize(Arrays.asList("A", "B", "C")
 JavaRDD<Integer> RDD2 = javaSparkContext.parallelize(Arrays.asList(1, 4, 5));
 JavaPairRDD<String, Integer> result = RDD1.cartesian(RDD2);
 result.foreach(x -> System.out.println(x));
+
+
+
+JavaPairRDD<String, String> RDD3 = javaSparkContext.parallelizePairs(Arrays.asList(
+new Tuple2("James", "United State"), new Tuple2("Alex", "Franch"),
+new Tuple2("Feng", "Italy"), new Tuple2("Jimmy", "United Kingdom")));
+
+JavaPairRDD<String, String> RDD4 = javaSparkContext.parallelizePairs(Arrays.asList(
+new Tuple2("IBM", "74544"), new Tuple2("Facebook", "3434343"),
+new Tuple2("Oracle", "54545"), new Tuple2("CMS", "454553")));
+
+RDD3.cartesian(RDD4).foreach(x->
+System.out.println(x));
 ```
 
 ##### groupByKey
