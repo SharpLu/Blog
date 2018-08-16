@@ -187,9 +187,14 @@ pairRDD.reduceByKey((v1, v2) -> (v1 + v2)).foreach(x -> System.out.println(x));
 pairRDD.reduceByKey((v1, v2) -> (v1)).foreach(x -> System.out.println(x));
 ```
     
-    
 ##### sortByKey()
-
+sortByKey belongs to OrderedRDDFunctions. It used to sort RDD by keys which support ascending or decending orders.
+![](http://feng.io/static/spark_examples/12.png)
+```java
+JavaPairRDD<String, Integer> unsortedPairRDD = javaSparkContext.parallelizePairs(Arrays.asList(new Tuple2<String, Integer>("B", 2), new Tuple2<String, Integer>("C", 5),new Tuple2<String, Integer>("D", 7), new Tuple2<String, Integer>("A", 8)));
+JavaPairRDD<String, Integer> result  = unsortedPairRDD.sortByKey(false,1);
+result.foreach(x-> System.out.println("sorted "+x));
+```
 ##### Join()
 
 ##### coGroup()
