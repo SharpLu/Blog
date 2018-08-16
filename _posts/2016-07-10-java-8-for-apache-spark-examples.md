@@ -131,7 +131,7 @@ JavaRDD<Integer> distinct = rddwithdupElements.distinct();
 ##### Cartesian
 Quick to understand the Certesian() function, this method are part of our mathematical set theory.
 More information : https://en.wikipedia.org/wiki/Cartesian_product
-Certesian() methods generates a certesian product of two RDDs, each element of our first RDD is paired with each elements of te second RDD. Therefore, the time complexity is n² if the certesian operation is executed on an RDD of types X and an RDD of type Y it will return an RDD that will consist of <x,y> pairs. The resultant RDD will consist of all the possible pairs of <x,y>.
+Certesian() methods generates a certesian product of two RDDs, each element of our first RDD is paired with each elements of te second RDD. Therefore, the time complexity is n²  and if the certesian operation is executed on an RDD of types X and an RDD of type Y it will return an RDD that will consist of <x,y> pairs. The resultant RDD will consist of all the possible pairs of <x,y>.
 
 Example below
 ![](http://feng.io/static/spark_examples/09.png)
