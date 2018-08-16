@@ -199,7 +199,7 @@ result.foreach(x-> System.out.println("sorted "+x));
 
 
 It used to join pair RDDs, this is the same concept as Join in SQL which conbined two or more datasets together. For instance, we have two pair RDDs of <x,y> and <x,z> types. When the join happens it will return an RDD of <x,(y,z)>	 type.
-
+![](http://feng.io/static/spark_examples/13.png)
 The example below
 ```java
 JavaPairRDD<String, String> pairRDD1 = javaSparkContext
@@ -226,6 +226,26 @@ fullOuterJoin(JavaPairRDD<K,V> other,Partitioner partitioner);
 
 ##### coGroup()
 
+This coGroup function also used to groups two or more pairRDDs also it's iterable. For instance, we have two pairRDD <x,y> and <x,z> types. When coGroup executed on these RDDS, it will return an RDD of <x,(Iterable<Y>,Iterable<Z>)> type. This operation also called groupwith.
+
+![](http://feng.io/static/spark_examples/14.png)
+The example below
+
+JavaPairRDD<String, String> pairRDD3 = javaSparkContext.parallelizePairs(Arrays.asList(new Tuple2<String, String>("B", "A"), new Tuple2<String, String>("B", "D"), new Tuple2<String, String>("A", "E"), new Tuple2<String, String>("A", "B")));
+JavaPairRDD<String, Integer> pairRDD4 = javaSparkContext.parallelizePairs(Arrays.asList(new Tuple2<String, Integer>("B", 2), new Tuple2<String, Integer>("B", 5), new Tuple2<String, Integer>("A", 7), new Tuple2<String, Integer>("A", 8)));
+JavaPairRDD<String, Tuple2<Iterable<String>, Iterable<Integer>>> cogroup = pairRDD3.cogroup(pairRDD4);
+JavaPairRDD<String, Tuple2<Iterable<String>, Iterable<Integer>>> groupWith = pairRDD3.groupWith(pairRDD4);
+System.out.println(cogroup.collect());
+
+it could express 
+groupWithRDD = pairRDD1.cogroup(pairRDD2);
+or
+groupWithRDD = pairRDD1.groupWith(pairRDD2);
+
+Also this operation requires shuffling of the same keys to one executor on a partioned RDD, an overloaded function is avaiable to provide partitioner:
+cogroup(JavaPairRDD<K,V> other,Partitioner partitioner)
+
+We will continues the action functions in next chapter.
 
 References
 
