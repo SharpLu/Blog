@@ -173,9 +173,20 @@ After the groupByKey the RDD belongs one key with list of values.
 
 ```
 
-
 ##### reduceByKey
 
+It used for pairRDDs that helps to aggregate data corresponding to a key with the help of an associative reduce function. We are given the same PairRDD that we are used in groupByKey example, reduceByKey operation can be performed as below.
+![](http://feng.io/static/spark_examples/11.png)
+
+```java
+List<Integer> intList = Arrays.asList(2,5,7,8);
+JavaRDD<Integer> intRDD = javaSparkContext.parallelize(intList, 2);
+JavaPairRDD<String, Integer> pairRDD = intRDD.mapToPair(i -> (i % 2 == 0) ? new Tuple2<String, Integer>("even", i) : new Tuple2<String, Integer>("odd", i));
+pairRDD.reduceByKey((v1, v2) -> (v1 + v2)).foreach(x -> System.out.println(x));
+pairRDD.reduceByKey((v1, v2) -> (v1)).foreach(x -> System.out.println(x));
+```
+    
+    
 ##### sortByKey
 
 ##### Join
