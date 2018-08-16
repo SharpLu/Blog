@@ -172,6 +172,7 @@ pairRDD.groupByKey();
 After the groupByKey the RDD belongs one key with list of values.
 
 ```
+As RDD is partitioned across multiple nodes. A key can be present in multiple partitions. In an operation such as groupByKey data will shuffled cross multiple partitions. So key after. shffling will land on which of the executor running is decided by Partitioner. By default, Spark uses Hash Partitioner that uses hashCode of key to decide which executor it should be shuffed to. User can also provide custom partitioners based on the requirement.
 
 ##### reduceByKey()
 
