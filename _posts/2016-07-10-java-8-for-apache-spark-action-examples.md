@@ -1,3 +1,4 @@
+---
 layout: post
 title: Java 8 for Apache Spark Action Examples
 categories:
@@ -5,6 +6,7 @@ categories:
 tags:
 - BigData
 date: 2016-07-10
+---
 
 In the previous section, we practiced the transformation functions in Spark and today we continues the action functions in Apache Spark.
 
