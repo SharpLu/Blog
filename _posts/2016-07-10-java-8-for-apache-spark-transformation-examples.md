@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 8 for Apache Spark Examples
+title: Java 8 for Apache Spark Transformation Examples
 categories:
 - blog
 tags:
@@ -186,7 +186,7 @@ JavaPairRDD<String, Integer> pairRDD = intRDD.mapToPair(i -> (i % 2 == 0) ? new 
 pairRDD.reduceByKey((v1, v2) -> (v1 + v2)).foreach(x -> System.out.println(x));
 pairRDD.reduceByKey((v1, v2) -> (v1)).foreach(x -> System.out.println(x));
 ```
-    
+
 ##### sortByKey()
 sortByKey belongs to OrderedRDDFunctions. It used to sort RDD by keys which support ascending or decending orders.
 ![](http://feng.io/static/spark_examples/12.png)
