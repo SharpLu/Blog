@@ -15,7 +15,7 @@ This article will discuss about the real cases and examples in Apache spark for 
 
 In map function each elements in the RDD will be mapping to the specific method or value.
 
-![](http://feng.io/static/spark_examples/01.png)
+![](https://sharplu.github.io/static/spark_examples/01.png)
 
 ````Java
 SparkConf conf = new SparkConf().setMaster("local[*]").setAppName("ApacheSparkJavaDeveloper");
@@ -30,7 +30,7 @@ output.saveAsTextFile("/");
 
 The filter function used to filter out the specific elements or conditions from RDD.
 
-![](http://feng.io/static/spark_examples/02.png)
+![](https://sharplu.github.io/static/spark_examples/02.png)
 
 ````
 output.filter(x->(x%2==0))
